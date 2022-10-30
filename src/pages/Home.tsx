@@ -6,7 +6,6 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import { ActionButtons } from "../components/ActionButton";
-import ExploreContainer from "../components/ExploreContainer";
 import "./Home.css";
 
 const Home: React.FC = () => {
