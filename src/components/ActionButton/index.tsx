@@ -37,7 +37,11 @@ export const ActionButtons: React.FC = () => {
         </IonButton>
       </div>
       <div ref={matchButtonRef}>
-        <IonButton onClick={playmatchButtonAnimation} className="match" fill="solid">
+        <IonButton
+          onClick={playmatchButtonAnimation}
+          className="match"
+          fill="solid"
+        >
           <IonIcon icon={heart}></IonIcon>
         </IonButton>
       </div>

@@ -8,7 +8,7 @@ import {
 import { ActionButtons } from "../components/ActionButton";
 import "./Home.css";
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -23,4 +23,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+
