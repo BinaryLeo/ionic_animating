@@ -1,34 +1,36 @@
-import { createAnimation, IonButton, IonIcon } from "@ionic/react";
+import { CreateAnimation, IonButton, IonIcon } from "@ionic/react";
 import { closeOutline, heart } from "ionicons/icons";
 import React, { useRef } from "react";
 import { pulseKeyFrames } from "../../constants";
 import "./style.css";
-export const ActionButtons: React.FC = () => {
-  
-  const unmatchButtonRef = useRef<HTMLDivElement>(null);
-  const matchButtonRef = useRef<HTMLDivElement>(null);
+interface ContainerProps {
+  animateUnmatchButton: boolean;
+  animateMatchButton: boolean;
+}
+export const ActionButtons: React.FC<ContainerProps> = (props) => {
+  const unmatchAnimationRef = useRef<CreateAnimation>(null);
+  const matchAnimationRef = useRef<CreateAnimation>(null);
 
   const playUnmatchButtonAnimation = () => {
-    if (unmatchButtonRef.current != null) {
-      const animation = createAnimation()
-        .addElement(unmatchButtonRef.current)
-        .duration(1000)
-        .keyframes(pulseKeyFrames);
-      animation.play();
+    if (unmatchAnimationRef.current !== null) {
+      unmatchAnimationRef.current.animation.play();
     }
   };
-  const playmatchButtonAnimation = () => {
-    if (matchButtonRef.current != null) {
-      const animation = createAnimation()
-        .addElement(matchButtonRef.current)
-        .duration(1000)
-        .keyframes(pulseKeyFrames);
-      animation.play();
+  const playMatchButtonAnimation = () => {
+    if (matchAnimationRef.current !== null) {
+      matchAnimationRef.current.animation.play();
     }
   };
   return (
     <div className="action-buttons-container">
-      <div ref={unmatchButtonRef}>
+      <CreateAnimation
+        ref={unmatchAnimationRef}
+        duration={1000}
+        iterations={1}
+        keyframes={pulseKeyFrames}
+        play={props.animateUnmatchButton}
+        stop={!props.animateUnmatchButton}
+      >
         <IonButton
           onClick={playUnmatchButtonAnimation}
           className="unmatch"
@@ -36,16 +38,24 @@ export const ActionButtons: React.FC = () => {
         >
           <IonIcon icon={closeOutline}></IonIcon>
         </IonButton>
-      </div>
-      <div ref={matchButtonRef}>
+      </CreateAnimation>
+
+      <CreateAnimation
+        ref={matchAnimationRef}
+        duration={1000}
+        iterations={1}
+        keyframes={pulseKeyFrames}
+        play={props.animateMatchButton}
+        stop={!props.animateMatchButton}
+      >
         <IonButton
-          onClick={playmatchButtonAnimation}
+          onClick={playMatchButtonAnimation}
           className="match"
           fill="solid"
         >
           <IonIcon icon={heart}></IonIcon>
         </IonButton>
-      </div>
+      </CreateAnimation>
     </div>
   );
 };

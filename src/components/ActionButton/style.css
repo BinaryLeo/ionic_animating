@@ -3,10 +3,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 .action-buttons-container ion-button {
   height: 70px;
   width: 70px;
+  font-size:x-large;
   --border-radius: 35px;
   --padding-top: 0;
   --padding-bottom: 0;
@@ -16,7 +18,7 @@
 }
 .action-buttons-container ion-button.unmatch {
   --background: #333;
-  --background-activated: #555;
+  --background-activated: rgb(85, 85, 85);
   --background-focused: #555;
 }
 .action-buttons-container ion-button.match {

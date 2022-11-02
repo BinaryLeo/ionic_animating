@@ -1,0 +1,22 @@
+ion-toolbar {
+  --background: #fefefe;
+  --border-style: none;
+  --outline: none;
+  --min-eight: 70px;
+}
+ion-toolbar > ion-title {
+  --color: #f19dc6;
+  font-size: 1.3rem;
+}
+ion-content {
+  --background: #fefefe;
+}
+ion-content > .stack-container-card {
+  display: grid;
+  grid-column: 1fr;
+  grid-row: 1fr;
+}
+ion-content > .stack-container-card > div {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
