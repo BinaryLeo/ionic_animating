@@ -1,14 +1,7 @@
-.action-buttons-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-.action-buttons-container ion-button {
+.action-buttons ion-button {
   height: 70px;
   width: 70px;
-  font-size:x-large;
+  font-size: x-large;
   --border-radius: 35px;
   --padding-top: 0;
   --padding-bottom: 0;
@@ -16,12 +9,12 @@
   --padding-end: 0;
   margin: 10px;
 }
-.action-buttons-container ion-button.unmatch {
+.action-buttons ion-button.match {
   --background: #333;
   --background-activated: rgb(85, 85, 85);
   --background-focused: #555;
 }
-.action-buttons-container ion-button.match {
+.action-buttons ion-button.unmatch {
   --background: rgb(228, 135, 135);
   --background-activated: rgb(212, 75, 75);
   --background-focused: rgb(216, 84, 84);
