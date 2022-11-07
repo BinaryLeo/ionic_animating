@@ -21,7 +21,7 @@ Animating react components with ionic animations.
    <td><img src="https://user-images.githubusercontent.com/72607039/199878332-35c790b1-8211-42c6-8cff-4c5971489475.jpg" width=270 ></td>
     <td><video src="https://user-images.githubusercontent.com/72607039/200099618-3838423a-94db-4381-a52d-dfc2142c834f.mp4" width=270 /></td>
   </tr>
- </table>!
+ </table>
 
 
 
